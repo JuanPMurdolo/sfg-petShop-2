@@ -40,8 +40,8 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:JuanPMurdolo/sfg-petShop-2.git</developerConnection>
-	  <tag>sfg-pet-clinic-0.0.1</tag>
+		<developerConnection>scm:git:git://github.com/JuanPMurdolo/sfg-petShop-2.git</developerConnection>
+	  <tag>sfg-pet-clinic-0.0.2</tag>
   </scm>
 
 
