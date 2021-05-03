@@ -1,4 +1,4 @@
-package globallogic.juanmurdolo.sfgpetclinic.model;
+package globallogic.juamurdolo.sfgpetclinic.model;
 
 public class Person {
 
