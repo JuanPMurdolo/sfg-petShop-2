@@ -1,6 +1,6 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
-public class Person {
+public class Person extends BaseEntity{
 
     private String nombre;
     private String apellido;

@@ -2,7 +2,7 @@ package globallogic.juanmurdolo.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
-public class Mascota {
+public class Mascota extends BaseEntity{
 
     private PetType petType;
     private Owner owner;
