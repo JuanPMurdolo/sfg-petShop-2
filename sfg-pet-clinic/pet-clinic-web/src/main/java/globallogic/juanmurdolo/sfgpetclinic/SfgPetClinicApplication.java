@@ -1,4 +1,4 @@
-package globallogic.juamurdolo.sfgpetclinic;
+package globallogic.juanmurdolo.sfgpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

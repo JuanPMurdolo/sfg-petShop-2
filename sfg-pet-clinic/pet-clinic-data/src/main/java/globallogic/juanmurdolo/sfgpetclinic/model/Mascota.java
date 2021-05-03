@@ -1,4 +1,4 @@
-package globallogic.juamurdolo.sfgpetclinic.model;
+package globallogic.juanmurdolo.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
