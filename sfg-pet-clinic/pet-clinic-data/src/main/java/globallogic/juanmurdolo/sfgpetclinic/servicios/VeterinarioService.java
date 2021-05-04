@@ -4,12 +4,7 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 
 import java.util.Set;
 
-public interface VeterinarioService {
+public interface VeterinarioService extends CrudService<Veterinario, Long> {
 
-    Veterinario findById(Long id);
-
-    Veterinario save(Veterinario veterinario);
-
-    Set<Veterinario> findAll();
-
+    Veterinario findByApellido(String apellido);
 }
