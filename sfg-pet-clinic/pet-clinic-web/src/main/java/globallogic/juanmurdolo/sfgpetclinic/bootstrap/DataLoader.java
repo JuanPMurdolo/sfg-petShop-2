@@ -4,8 +4,6 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.map.OwnerServiceMap;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.map.VeterinarioServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +15,11 @@ public class DataLoader implements CommandLineRunner {
 
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        veterinarioService = new VeterinarioServiceMap();
+
+    public DataLoader(OwnerService ownerService, VeterinarioService veterinarioService) {
+        this.ownerService = ownerService;
+        this.veterinarioService = veterinarioService;
     }
-
-
 
     @Override
     public void run(String... args) throws Exception {

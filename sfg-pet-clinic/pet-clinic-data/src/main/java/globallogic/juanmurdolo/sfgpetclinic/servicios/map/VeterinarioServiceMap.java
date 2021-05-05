@@ -4,9 +4,11 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VeterinarioServiceMap extends AbstractMapService<Veterinario, Long> implements VeterinarioService {
 
     @Override

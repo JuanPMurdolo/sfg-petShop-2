@@ -3,9 +3,11 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

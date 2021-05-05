@@ -3,9 +3,10 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.MascotaService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class MascotaServiceMap extends AbstractMapService<Mascota, Long> implements MascotaService {
 
 
