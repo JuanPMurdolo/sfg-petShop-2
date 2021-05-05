@@ -2,10 +2,12 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
+import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+
     @Override
     public Set<Owner> findAll() {
         return super.findall();
@@ -30,4 +32,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     public void deleteById(Long id) {
         super.deleteById(id);
     }
+
+    @Override
+    public Owner findByApellido(String apellido) {
+        return null;
+    }
+
+
 }

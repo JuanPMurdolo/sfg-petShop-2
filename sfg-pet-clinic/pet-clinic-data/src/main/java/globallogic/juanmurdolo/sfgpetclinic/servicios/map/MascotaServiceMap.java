@@ -2,10 +2,11 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
+import globallogic.juanmurdolo.sfgpetclinic.servicios.MascotaService;
 
 import java.util.Set;
 
-public class MascotaServiceMap extends AbstractMapService<Mascota, Long> implements CrudService<Mascota, Long> {
+public class MascotaServiceMap extends AbstractMapService<Mascota, Long> implements MascotaService {
 
 
     @Override

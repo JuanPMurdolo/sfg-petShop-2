@@ -3,10 +3,11 @@ package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
+import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
 
 import java.util.Set;
 
-public class VeterinarioServiceMap extends AbstractMapService<Veterinario, Long> implements CrudService<Veterinario, Long> {
+public class VeterinarioServiceMap extends AbstractMapService<Veterinario, Long> implements VeterinarioService {
 
     @Override
     public Set<Veterinario> findAll() {
@@ -31,5 +32,10 @@ public class VeterinarioServiceMap extends AbstractMapService<Veterinario, Long>
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Veterinario findByApellido(String apellido) {
+        return null;
     }
 }
