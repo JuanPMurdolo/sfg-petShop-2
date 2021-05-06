@@ -22,7 +22,7 @@ public class MascotaServiceMap extends AbstractMapService<Mascota, Long> impleme
 
     @Override
     public Mascota save(Mascota object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
