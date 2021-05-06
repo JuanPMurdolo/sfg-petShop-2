@@ -5,6 +5,24 @@
     <title>Listado de veterinarios</title>
 </head>
 <body>
-    <h1 th:text="'Listado de veterinarios'">Listado de vets...</h1>
+<!--/*@thymesVar id="Veterinario" type="globallogic.juanmurdolo.sfgpetclinic.model.Veterinario"*/-->
+<h1 th:text="'Listado de Vetes'">Listado de dueños...</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="veterinario : ${veterinarios}">
+        <td th:text="${veterinario?.id}">1</td>
+        <td th:text="${veterinario?.nombre}">Joe</td>
+        <td th:text="${veterinario?.apellido}">Buck</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
