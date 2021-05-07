@@ -1,8 +1,10 @@
 package globallogic.juanmurdolo.sfgpetclinic.bootstrap;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
+import globallogic.juanmurdolo.sfgpetclinic.model.PetType;
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
+import globallogic.juanmurdolo.sfgpetclinic.servicios.PetTypeService;
 import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,17 +14,26 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VeterinarioService veterinarioService;
+    private final PetTypeService petTypeService;
 
 
-
-
-    public DataLoader(OwnerService ownerService, VeterinarioService veterinarioService) {
+    public DataLoader(OwnerService ownerService, VeterinarioService veterinarioService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.veterinarioService = veterinarioService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+     PetType perro = new PetType();
+     perro.setNombre("perro");
+     PetType saveDogType = petTypeService.save(perro);
+
+        PetType gato = new PetType();
+        gato.setNombre("gato");
+        PetType saveGatoType = petTypeService.save(gato);
+
+
     Owner owner1 = new Owner();
     owner1.setNombre("Jorge");
     owner1.setApellido("Uno");
@@ -35,4 +46,6 @@ public class DataLoader implements CommandLineRunner {
 
     veterinarioService.save(vet1);
     }
+
+
 }
