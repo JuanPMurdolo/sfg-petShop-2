@@ -1,10 +1,11 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Person{
 
-    private Set<Mascota> mascotas;
+    private Set<Mascota> mascotas = new HashSet<>();
     private String direccion;
     private String ciudad;
     private String telefono;
