@@ -9,6 +9,7 @@ import java.util.Set;
 
 public class EspecialidadMapService extends AbstractMapService<Especialidad, Long> implements EspecialidadService {
 
+
     @Override
     public Set<Especialidad> findAll() {
         return super.findall();
