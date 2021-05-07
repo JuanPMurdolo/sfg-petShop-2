@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 <head>
     <meta charset="UTF-8">
     <title>Listado de dueños</title>
 </head>
 <body>
 <!--/*@thymesVar id="Owner" type="globallogic.juanmurdolo.sfgpetclinic.model.Owner"*/-->
-    <h1 th:text="'Listado de Dueños'">Listado de dueños...</h1>
+    <h2 th:text="'Listado de Dueños'">Listado de dueños...</h2>
 
-<table>
+<table id="owners" class="table table-striped">
     <thead>
     <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
+        <th style="width 150px;">Id</th>
+        <th style="width 150px;">Nombre</th>
+        <th style="width 150px;">Apellido</th>
     </tr>
     </thead>
     <tbody>
