@@ -1,12 +1,21 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name="mascotas")
 public class Mascota extends BaseEntity{
 
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+    @ManyToOne
+    @JoinColumn(name="owner_id")
     private Owner owner;
+    @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
+    @Column(name = "nombre")
     private String nombre;
 
     public PetType getPetType() {
