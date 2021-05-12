@@ -1,4 +1,4 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
+package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.BaseEntity;
 

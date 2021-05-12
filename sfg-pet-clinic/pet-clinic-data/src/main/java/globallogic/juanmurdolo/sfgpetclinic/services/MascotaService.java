@@ -1,8 +1,6 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios;
+package globallogic.juanmurdolo.sfgpetclinic.services;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
-
-import java.util.Set;
 
 public interface MascotaService extends CrudService<Mascota, Long>{
 

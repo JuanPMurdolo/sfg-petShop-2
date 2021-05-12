@@ -1,7 +1,7 @@
 package globallogic.juanmurdolo.sfgpetclinic.controllers;
 
 
-import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
+import globallogic.juanmurdolo.sfgpetclinic.services.VeterinarioService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

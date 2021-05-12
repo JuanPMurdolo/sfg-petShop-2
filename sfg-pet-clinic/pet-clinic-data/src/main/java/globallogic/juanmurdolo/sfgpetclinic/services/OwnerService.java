@@ -1,7 +1,6 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios;
+package globallogic.juanmurdolo.sfgpetclinic.services;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
-import java.util.Set;
 
 public interface OwnerService  extends  CrudService<Owner, Long>{
 

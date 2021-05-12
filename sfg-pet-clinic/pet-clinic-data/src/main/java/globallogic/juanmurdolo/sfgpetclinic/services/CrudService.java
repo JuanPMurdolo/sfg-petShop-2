@@ -1,4 +1,4 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios;
+package globallogic.juanmurdolo.sfgpetclinic.services;
 
 import java.util.Set;
 

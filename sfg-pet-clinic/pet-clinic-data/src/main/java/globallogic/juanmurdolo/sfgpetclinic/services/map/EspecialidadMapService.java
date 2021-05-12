@@ -1,9 +1,7 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
+package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Especialidad;
-import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.EspecialidadService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.MascotaService;
+import globallogic.juanmurdolo.sfgpetclinic.services.EspecialidadService;
 
 import java.util.Set;
 

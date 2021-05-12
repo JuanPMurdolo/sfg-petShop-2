@@ -1,11 +1,10 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios.map;
+package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.CrudService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.MascotaService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.PetTypeService;
+import globallogic.juanmurdolo.sfgpetclinic.services.MascotaService;
+import globallogic.juanmurdolo.sfgpetclinic.services.OwnerService;
+import globallogic.juanmurdolo.sfgpetclinic.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

@@ -1,8 +1,6 @@
-package globallogic.juanmurdolo.sfgpetclinic.servicios;
+package globallogic.juanmurdolo.sfgpetclinic.services;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
-
-import java.util.Set;
 
 public interface VeterinarioService extends CrudService<Veterinario, Long> {
 

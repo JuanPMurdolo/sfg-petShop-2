@@ -1,10 +1,10 @@
 package globallogic.juanmurdolo.sfgpetclinic.bootstrap;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.*;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.EspecialidadService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.OwnerService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.PetTypeService;
-import globallogic.juanmurdolo.sfgpetclinic.servicios.VeterinarioService;
+import globallogic.juanmurdolo.sfgpetclinic.services.EspecialidadService;
+import globallogic.juanmurdolo.sfgpetclinic.services.OwnerService;
+import globallogic.juanmurdolo.sfgpetclinic.services.PetTypeService;
+import globallogic.juanmurdolo.sfgpetclinic.services.VeterinarioService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
