@@ -1,11 +1,19 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "visitas")
 public class Visita extends BaseEntity{
 
+    @Column(name = "fecha")
     private LocalDate fecha;
+    @Column(name = "descripcion")
     private String descripcion;
+
+    @ManyToOne
+    @JoinColumn(name = "mascota_id")
     private Mascota mascota;
 
     public LocalDate getFecha() {

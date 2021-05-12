@@ -2,6 +2,8 @@ package globallogic.juanmurdolo.sfgpetclinic.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="mascotas")
@@ -17,6 +19,9 @@ public class Mascota extends BaseEntity{
     private LocalDate fechaNacimiento;
     @Column(name = "nombre")
     private String nombre;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "mascota")
+    private Set<Visita> visitas = new HashSet<>();
 
     public PetType getPetType() {
         return petType;
@@ -48,5 +53,13 @@ public class Mascota extends BaseEntity{
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Set<Visita> getVisitas() {
+        return visitas;
+    }
+
+    public void setVisitas(Set<Visita> visitas) {
+        this.visitas = visitas;
     }
 }
