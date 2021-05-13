@@ -5,11 +5,13 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Especialidad;
 import globallogic.juanmurdolo.sfgpetclinic.model.Veterinario;
 import globallogic.juanmurdolo.sfgpetclinic.services.EspecialidadService;
 import globallogic.juanmurdolo.sfgpetclinic.services.VeterinarioService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VeterinarioServiceMap extends AbstractMapService<Veterinario, Long> implements VeterinarioService {
 
     private final EspecialidadService especialidadService;

@@ -2,10 +2,12 @@ package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 import globallogic.juanmurdolo.sfgpetclinic.services.MascotaService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
+@Profile({"default", "map"})
 public class MascotaServiceMap extends AbstractMapService<Mascota, Long> implements MascotaService {
 
 

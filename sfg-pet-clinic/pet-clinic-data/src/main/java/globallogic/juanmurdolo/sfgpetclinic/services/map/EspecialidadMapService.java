@@ -2,9 +2,13 @@ package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Especialidad;
 import globallogic.juanmurdolo.sfgpetclinic.services.EspecialidadService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
+@Profile({"default", "map"})
 public class EspecialidadMapService extends AbstractMapService<Especialidad, Long> implements EspecialidadService {
 
 

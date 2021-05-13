@@ -2,9 +2,13 @@ package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Visita;
 import globallogic.juanmurdolo.sfgpetclinic.services.VisitaService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
+@Profile({"default", "map"})
 public class VisitaMapService extends AbstractMapService<Visita, Long> implements VisitaService {
 
 
