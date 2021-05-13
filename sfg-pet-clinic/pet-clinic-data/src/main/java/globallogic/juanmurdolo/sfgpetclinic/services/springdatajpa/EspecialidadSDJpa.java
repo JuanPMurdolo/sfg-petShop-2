@@ -4,10 +4,14 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Especialidad;
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
 import globallogic.juanmurdolo.sfgpetclinic.repositories.EspecialidadRepository;
 import globallogic.juanmurdolo.sfgpetclinic.services.EspecialidadService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springdatajpa")
 public class EspecialidadSDJpa implements EspecialidadService {
     private final EspecialidadRepository especialidadRepository;
 

@@ -5,10 +5,14 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
 import globallogic.juanmurdolo.sfgpetclinic.repositories.MascotaRepository;
 import globallogic.juanmurdolo.sfgpetclinic.repositories.PetTypeRepository;
 import globallogic.juanmurdolo.sfgpetclinic.services.MascotaService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springdatajpa")
 public class MascotaSDJpa implements MascotaService {
 
     private final MascotaRepository mascotaRepository;
