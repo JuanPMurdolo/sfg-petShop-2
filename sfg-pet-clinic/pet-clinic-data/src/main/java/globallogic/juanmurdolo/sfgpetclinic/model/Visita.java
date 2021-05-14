@@ -1,14 +1,23 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
-@Entity
 @Table(name = "visitas")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class Visita extends BaseEntity{
 
     @Column(name = "fecha")
     private LocalDate fecha;
+
     @Column(name = "descripcion")
     private String descripcion;
 
@@ -16,27 +25,4 @@ public class Visita extends BaseEntity{
     @JoinColumn(name = "mascota_id")
     private Mascota mascota;
 
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Mascota getMascota() {
-        return mascota;
-    }
-
-    public void setMascota(Mascota mascota) {
-        this.mascota = mascota;
-    }
 }

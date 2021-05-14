@@ -1,21 +1,21 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
 @Table(name = "types")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class PetType extends BaseEntity{
 
     @Column(name = "nombre")
     private String nombre;
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 }

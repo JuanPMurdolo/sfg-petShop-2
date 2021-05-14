@@ -1,12 +1,19 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 
-@Entity
 @Table(name = "veterinarios")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
 public class Veterinario extends Person{
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -14,11 +21,4 @@ public class Veterinario extends Person{
             inverseJoinColumns = @JoinColumn(name = "especialidad_id"))
     private Set<Especialidad> especialidad = new HashSet<>();
 
-    public Set<Especialidad> getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(Set<Especialidad> especialidad) {
-        this.especialidad = especialidad;
-    }
 }

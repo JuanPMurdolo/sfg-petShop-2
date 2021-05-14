@@ -1,11 +1,16 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
 
+import lombok.*;
 import org.hibernate.annotations.Columns;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @MappedSuperclass
 public class Person extends BaseEntity{
 
@@ -13,6 +18,12 @@ public class Person extends BaseEntity{
     private String nombre;
     @Column(name="apellido")
     private String apellido;
+
+    public Person(Long id, String nombre, String apellido) {
+        super(id);
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
 
     public String getNombre() {
         return nombre;
