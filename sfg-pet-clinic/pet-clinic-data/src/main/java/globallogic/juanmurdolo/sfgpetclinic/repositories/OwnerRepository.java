@@ -9,5 +9,5 @@ public interface OwnerRepository extends CrudRepository<Owner, Long> {
 
     Owner findByApellido(String apellido);
 
-    List<Owner> findAllByApellido(String apellido);
+    List<Owner> findAllByApellidoContainingIgnoreCase(String apellido);
 }

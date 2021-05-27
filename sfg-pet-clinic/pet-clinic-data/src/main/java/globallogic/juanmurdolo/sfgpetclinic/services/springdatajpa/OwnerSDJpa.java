@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -61,6 +60,6 @@ public class OwnerSDJpa implements OwnerService {
 
     @Override
     public List<Owner> findAllByApellidoLike(String apellido) {
-        return ownerRepository.findAllByApellido(apellido);
+        return ownerRepository.findAllByApellidoContainingIgnoreCase(apellido);
     }
 }

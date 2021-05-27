@@ -80,7 +80,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public List<Owner> findAllByApellidoLike(String apellido) {
-        return ownerRepository.findAllByApellido(apellido);
+        //todo - impl
+        return null;
     }
 
 
