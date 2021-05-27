@@ -2,12 +2,14 @@ package globallogic.juanmurdolo.sfgpetclinic.services.map;
 
 import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 import globallogic.juanmurdolo.sfgpetclinic.model.Owner;
+import globallogic.juanmurdolo.sfgpetclinic.repositories.OwnerRepository;
 import globallogic.juanmurdolo.sfgpetclinic.services.MascotaService;
 import globallogic.juanmurdolo.sfgpetclinic.services.OwnerService;
 import globallogic.juanmurdolo.sfgpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -16,10 +18,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     private final PetTypeService petTypeService;
     private final MascotaService mascotaService;
+    private final OwnerRepository ownerRepository;
 
-    public OwnerServiceMap(PetTypeService petTypeService, MascotaService mascotaService) {
+    public OwnerServiceMap(OwnerRepository ownerRepository, PetTypeService petTypeService, MascotaService mascotaService) {
         this.petTypeService = petTypeService;
         this.mascotaService = mascotaService;
+        this.ownerRepository = ownerRepository;
     }
 
     @Override
@@ -67,7 +71,16 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByApellido(String apellido) {
-        return null;
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getApellido().equalsIgnoreCase(apellido))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByApellidoLike(String apellido) {
+        return ownerRepository.findAllByApellido(apellido);
     }
 
 

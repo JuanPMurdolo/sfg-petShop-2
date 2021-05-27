@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -56,5 +57,10 @@ public class OwnerSDJpa implements OwnerService {
     @Override
     public Owner findByApellido(String apellido) {
         return ownerRepository.findByApellido(apellido);
+    }
+
+    @Override
+    public List<Owner> findAllByApellidoLike(String apellido) {
+        return ownerRepository.findAllByApellido(apellido);
     }
 }
