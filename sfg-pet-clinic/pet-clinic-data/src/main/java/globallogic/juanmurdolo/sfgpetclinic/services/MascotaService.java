@@ -4,4 +4,6 @@ import globallogic.juanmurdolo.sfgpetclinic.model.Mascota;
 
 public interface MascotaService extends CrudService<Mascota, Long>{
 
+
+
 }

@@ -1,6 +1,7 @@
 package globallogic.juanmurdolo.sfgpetclinic.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -25,10 +26,11 @@ public class Mascota extends BaseEntity{
     private Owner owner;
 
     @Column(name = "fecha_nacimiento")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate fechaNacimiento;
 
     @Column(name = "nombre")
-    private String nombre;
+    private String nombrecito;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mascota")
     private Set<Visita> visitas = new HashSet<>();
