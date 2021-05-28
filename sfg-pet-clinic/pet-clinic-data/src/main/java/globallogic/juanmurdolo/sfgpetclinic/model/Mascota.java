@@ -29,7 +29,7 @@ public class Mascota extends BaseEntity{
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate fechaNacimiento;
 
-    @Column(name = "nombre")
+    @Column(name = "nombrecito")
     private String nombrecito;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "mascota")
